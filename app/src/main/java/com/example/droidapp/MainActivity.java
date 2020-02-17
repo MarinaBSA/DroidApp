@@ -51,8 +51,22 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (id) {
+            case R.id.action_order:
+                Intent intent = new Intent(MainActivity.this, OrderActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.action_status:
+                displayToast(getString(R.string.action_status_message), getApplicationContext(), Toast.LENGTH_LONG);
+                break;
+            case R.id.action_favorites:
+                displayToast(getString(R.string.action_favorites_message), getApplicationContext(), Toast.LENGTH_LONG);
+                break;
+            case R.id.action_contact:
+                displayToast(getString(R.string.action_contact_message), getApplicationContext(), Toast.LENGTH_LONG);
+                break;
+            default:
+                break;
         }
 
         return super.onOptionsItemSelected(item);
@@ -82,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public static void displayToast(String message, Context context, int length) {
-        Toast toast = Toast.makeText(context,message, length);
+        Toast toast = Toast.makeText(context, message, length);
         toast.show();
     }
 

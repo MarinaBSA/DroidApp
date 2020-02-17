@@ -11,6 +11,9 @@
         android:id="@+id/order_textview"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/data_textview"
+        android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
         android:text="@string/name_textview"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -133,6 +136,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="40dp"
         android:text="@string/delivery_method_text"
+        android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/note_textview" />
@@ -150,11 +154,11 @@
         app:layout_constraintTop_toBottomOf="@id/delivery_method_text">
 
         <RadioButton
-            android:checked="true"
             android:id="@+id/same_day_order"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:checked="true"
             android:onClick="chooseDeliveryMethod"
             android:text="@string/same_day_text"
             app:layout_constraintLeft_toLeftOf="parent"
